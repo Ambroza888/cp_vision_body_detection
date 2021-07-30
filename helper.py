@@ -1,5 +1,5 @@
 import numpy as np
-
+import tw
 
 class Helper:
     counter = 0
@@ -17,9 +17,9 @@ class Helper:
         return angle
 
     def patient_attention(self, angle_elbow, angle_wrist):
-        print(angle_wrist)
         if 30 < angle_elbow < 96:
             if self.counter == 4:
+                # tw.send_message("!!! PATIENT NEED ATTENTION !!!")
                 print("Patient needs attention")
                 self.counter = 0
             if angle_wrist > 12:
